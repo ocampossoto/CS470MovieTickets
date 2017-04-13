@@ -26,9 +26,7 @@ CREATE TABLE `ScheduledMovie` (
     MovieID  INT(12) unsigned NOT NULL,
     NumPurchased INT(4) unsigned NOT NULL,
     --date is included in StartTime (timestamp), but feel free to add it if you want
-    PRIMARY KEY (ScreenID, StartTime),
-    FOREIGN KEY fk_screenid(ScreenID)
-    REFERENCES Screen(ScreenID)
+    PRIMARY KEY (ScreenID, StartTime)    
 )ENGINE=INNODB;
 
 
