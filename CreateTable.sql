@@ -6,7 +6,7 @@ CREATE TABLE Theater (
     TheaterName VARCHAR(50) NOT NULL,
     NumOfScreens INT (2) unsigned NOT NULL,
     Address VARCHAR(125) NOT NULL,
-    PhoneNum INT(15) unsigned NOT NULL,
+    PhoneNum VARCHAR(20) NOT NULL,
     PRIMARY KEY (TheaterID)
 )ENGINE=INNODB;
 
@@ -33,12 +33,11 @@ CREATE TABLE Movie (
 
 CREATE TABLE ScheduledMovie (
     ScreenID INT(10) unsigned NOT NULL,
-    StartTime TIMESTAMP NOT NULL,
+    StartTime DATETIME NOT NULL,
     TheaterID INT(10) unsigned NOT NULL,
     MovieID  INT(12) unsigned NOT NULL,
     NumPurchased INT(4) unsigned NOT NULL,
-    /*date is included in StartTime (timestamp), but feel free to add it if you want*/
-    PRIMARY KEY (ScreenID, StartTime),   
+    PRIMARY KEY (ScreenID, StartTime, TheaterID),   
     FOREIGN KEY (MovieID) REFERENCES Movie(MovieID),
     FOREIGN KEY (TheaterID) REFERENCES Theater(TheaterID),
     FOREIGN KEY (ScreenID) REFERENCES Screen(ScreenID)
@@ -64,7 +63,7 @@ CREATE TABLE MovieTicket (
     FOREIGN KEY (TheaterID) REFERENCES Theater(TheaterID),
     FOREIGN KEY (PriceType) REFERENCES TicketPrice(PriceType),
     FOREIGN KEY (ScreenID) REFERENCES Screen(ScreenID),
-	FOREIGN KEY (MovieID) REFERENCES Movie(MovieID)
+    FOREIGN KEY (MovieID) REFERENCES Movie(MovieID)
 )ENGINE=INNODB;
 
 CREATE TABLE Transaction (
@@ -96,3 +95,7 @@ CREATE TABLE Transaction_MovieTicket (
    FOREIGN KEY (TransID) REFERENCES Transaction(TransID),
    FOREIGN KEY (TicketID) REFERENCES MovieTicket(ScreenID)
 )ENGINE=INNODB;
+
+/* Delete Evering or Delete only tables:
+DROP SCHEMA booking;
+DROP TABLE transaction_movieticket, Customer, Transaction, MovieTicket, TicketPrice, ScheduledMovie, Movie, Screen, Theater;*/

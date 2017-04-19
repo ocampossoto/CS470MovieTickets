@@ -1,0 +1,24 @@
+/*for mobile screens*/
+@media screen and (min-width: 720px){
+    body{
+        margin: 20% ;
+        font-size: 14px;
+    }
+}
+/*regular screens*/
+body{
+    background: #eee;
+    margin-top: 0px;
+    align-content: center;
+}
+/*converts button into link but submits the form as well*/
+button {
+    background:none!important;
+     border:none; 
+     padding:0!important;
+    
+    /*optional*/
+     font-family:arial,sans-serif; /*input has OS specific font-family*/
+     color:#069;
+     cursor:pointer;
+}
