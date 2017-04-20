@@ -451,3 +451,11 @@ INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchase
 VALUES (4, '2017-04-21 9:00:00', 3, 4, 0);
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
 VALUES (4, '2017-04-21 11:15:00', 3, 3, 0);
+
+/*ticket price data */
+INSERT INTO ticketprice (name, PriceCents)
+VALUES ('Adult', 7.25);
+INSERT INTO ticketprice (name, PriceCents)
+VALUES ('Child', 5.25);
+INSERT INTO ticketprice (name, PriceCents)
+VALUES ('Senior', 4.25);
