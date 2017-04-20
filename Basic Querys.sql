@@ -11,8 +11,10 @@ SELECT Distinct Title, MinutesDuration, Rating ,TheaterID
     Where TheaterID = 2 and DATE(StartTime) = curdate();
 
 /*Get Movie times at select theater and select movie */
-SELECT Title, Time(StartTime) 
+SELECT Distinct Title, DATE_FORMAT(Time(StartTime), '%H:%i') as time ,StartTime
 	FROM scheduledmovie
-    JOIN movie ON scheduledmovie.MovieID = movie.MovieID
-    WHERE movie.Title = 'Title1';
+    INNER JOIN movie ON scheduledmovie.MovieID = movie.MovieID
+    WHERE movie.Title = 'Title1' AND DATE(StartTime) = curdate();
     
+SELECT name, PriceCents
+	FROM ticketprice;
