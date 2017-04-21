@@ -11,14 +11,115 @@ body{
     margin-top: 0px;
     align-content: center;
 }
-/*converts button into link but submits the form as well*/
-button {
-    background:none!important;
-     border:none; 
-     padding:0!important;
-    
-    /*optional*/
-     font-family:arial,sans-serif; /*input has OS specific font-family*/
-     color:#069;
-     cursor:pointer;
+#theaters {
+    display: inline;
 }
+
+div.theater_container{
+    position:relative;
+    display: inline-block;
+    width: 320px;
+    height: 120px;
+    margin: 10px; 
+    border: 4px double lightgray;
+    border-radius: 5px;
+    background-color: azure;
+}
+div.theater_container:hover {
+    background-color: bisque;
+    cursor: pointer;
+}
+
+div.theater_title{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    
+}
+
+div.theater_address {
+    position: absolute;
+    top:45px;
+    left: 25px;
+    right: 10px;
+    text-transform: uppercase;
+}
+
+div.theater_phone_number {
+    position: absolute;
+    top: 85px;
+    left: 25px;
+}
+
+div.movie_container{
+   position:relative;
+    display: inline-block;
+    width: 500px;
+    height: 200px;
+    margin: 10px; 
+    border: 4px double lightgray;
+    border-radius: 5px;
+}
+
+div.movie_container:hover {
+    background-color: bisque;
+    cursor: pointer;
+}
+
+div.movie_title{
+    position:absolute;
+    top:10px;
+    left:20px;
+    font-size: 30px;
+}
+
+div.movie_rating_duration{
+    position:absolute;
+    top:60px;
+    left:25px;
+    font-size:20px;
+    
+}
+
+div.movie_description{
+    position:absolute;
+    height: 100px;
+    width:460px;
+    top:100px;
+    left:25px;
+    font-size: 16px;
+    word-wrap: break-word;
+    
+}
+
+div.showtime_container{
+    position: relative;
+    display: inline-block;
+    height: 100px;
+    width: 150px;
+    margin:10px;
+    border: 4px double lightgray;
+    border-radius: 5px;
+}
+
+div.showtime_container:hover{
+    background-color: lightblue;
+    cursor: pointer;
+}
+div.showtime_text{
+    position:absolute;
+    height: 80px;
+    line-height: 80px;
+    width:130px;
+    top:10px;
+    left:10px;
+    font-size:30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#movies {
+    display: inline;
+}
+

@@ -1,5 +1,46 @@
+<!DOCTYPE html>
 <html>
-	<h1> Hello World </h1>
+    <head>
+        <title>CinemaCorp Movie Tickets</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script type="text/javascript" src="script/htmlmaker.js"></script>
+        <script type="text/javascript" src="script/general.js"></script>
+        <script id="theater-template" type="text/html">
+            <div class='theater_container' id='{{TheaterID}}'>
+                <div class='theater_title'>{{TheaterName}} | {{NumOfScreens}}</div>
+                <div class='theater_address'>{{Address}}</div>
+                <div class='theater_phone_number'>{{PhoneNum}}</div>
+            </div>         
+        </script>
+        <script id='movies-template' type='text/html'>
+            <div class="movie_container" id='{{MovieID}}' xml:id2="{{TheaterID}}">
+                <div class="movie_title">{{Title}}</div>
+                <div class="movie_rating_duration">{{Rating}}  |  {{Duration}} Minutes</div>
+                <div class="movie_description">{{Description}}</div>
+            </div>
+        </script>
+        <script id='showtime-template' type='text/html'>
+            <div class="showtime_container">
+                <div class="showtime_text">{{Time}}</div>
+            </div>
+        </script>
+    </head>
+    <body>
+        <div class="banner">
+            <div><img src="resources/CinemaCorpLogo.png" alt="Company Logo"></div>
+        </div>
+        
+        <div id="theaters">
+            
+        </div>
+        <div id="movies">
+            
+        </div>
+        <div id="showtimes">
+            
+        </div>
+    </body>
 </html>
 
-http://localhost/php/Database+Website/index.html
