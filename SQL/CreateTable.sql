@@ -22,6 +22,7 @@ CREATE TABLE Screen(
     FOREIGN KEY (TheaterID) REFERENCES Theater(TheaterID)
 )ENGINE=INNODB;
 
+
 CREATE TABLE Movie (
     MovieID INT(12) unsigned NOT NULL AUTO_INCREMENT,
     Title VARCHAR(255) NOT NULL,
@@ -37,6 +38,7 @@ CREATE TABLE ScheduledMovie (
     TheaterID INT(10) unsigned NOT NULL,
     MovieID  INT(12) unsigned NOT NULL,
     NumPurchased INT(4) unsigned NOT NULL,
+    /*date is included in StartTime (timestamp), but feel free to add it if you want*/
     PRIMARY KEY (ScreenID, StartTime, TheaterID),   
     FOREIGN KEY (MovieID) REFERENCES Movie(MovieID),
     FOREIGN KEY (TheaterID) REFERENCES Theater(TheaterID),
@@ -46,7 +48,7 @@ CREATE TABLE ScheduledMovie (
 CREATE TABLE TicketPrice (
     PriceType INT(2) UNSIGNED NOT NULL AUTO_INCREMENT,
     name VARCHAR(125) NOT NULL,
-    PriceCents  INT(6) UNSIGNED NOT NULL,
+    PriceCents  DOUBLE UNSIGNED NOT NULL,
     PRIMARY KEY (PriceType)
 )ENGINE=INNODB;
 
@@ -54,16 +56,14 @@ CREATE TABLE MovieTicket (
     TicketID INT(15) UNSIGNED NOT NULL AUTO_INCREMENT,
     TheaterID INT(10) UNSIGNED NOT NULL,
     MovieID INT(12) UNSIGNED NOT NULL,
-    StartTime TIME NOT NULL,
-    StartDate DATE NOT NULL,
+    Time DATETIME NOT NULL,
     ScreenID INT(10) unsigned NOT NULL,
-    SeatNumber INT (4) UNSIGNED,
     PriceType INT (2) UNSIGNED NOT NULL,
     PRIMARY KEY (TicketID),
     FOREIGN KEY (TheaterID) REFERENCES Theater(TheaterID),
     FOREIGN KEY (PriceType) REFERENCES TicketPrice(PriceType),
     FOREIGN KEY (ScreenID) REFERENCES Screen(ScreenID),
-    FOREIGN KEY (MovieID) REFERENCES Movie(MovieID)
+	FOREIGN KEY (MovieID) REFERENCES Movie(MovieID)
 )ENGINE=INNODB;
 
 CREATE TABLE Transaction (
@@ -74,7 +74,7 @@ CREATE TABLE Transaction (
     NameOnCard VARCHAR(125) NOT NULL,
     PaymentMethod VARCHAR(20) NOT NULL,
     BillingAddress VARCHAR(150) NOT NULL,
-    CardNum INT(20) UNSIGNED NOT NULL,
+    CardNum BIGINT(20) UNSIGNED NOT NULL,
     Status VARCHAR(20) NOT NULL,
     PRIMARY KEY (TransID)
 )ENGINE=INNODB;
