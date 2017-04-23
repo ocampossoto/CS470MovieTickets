@@ -1,18 +1,12 @@
 /*add a couple theaters*/
 INSERT INTO Theater (TheaterName, NumOfScreens,Address,PhoneNum)
-VALUES ('Theater One', 20, '100 Main St, Kansas City, Missouri 64015', '800-123-4567');
+VALUES ('Theater One', 5, '100 Main st', '800-123-4567');
 
 INSERT INTO Theater (TheaterName, NumOfScreens,Address,PhoneNum)
-VALUES ('Theater Two', 12, '500 Broadway St, Kansas City, Missouri 64015', '180-012-3456');
+VALUES ('Theater Two', 5, '500 Broadway st', '180-012-3456');
 
 INSERT INTO Theater (TheaterName, NumOfScreens,Address,PhoneNum)
-VALUES ('Theater Three', 10, '3628 15th St Kansas City, Missouri 64015', '888-123-4567');
-
-INSERT INTO Theater (TheaterName, NumOfScreens,Address,PhoneNum)
-VALUES ('Cinemark at the Plaza', 12, 'Country Club Plaza, 526 Nichols Rd, Kansas City, MO 64112', '816-756-5877');
-
-INSERT INTO Theater (TheaterName, NumOfScreens,Address,PhoneNum)
-VALUES ('Pharaoh Cinema', 4, '114 W Maple Ave, Independence, MO 64050', '816-836-9555');
+VALUES ('Theater Three', 5, '3628 15th st', '888-123-4567');
 
 /*add screens*/
 INSERT INTO screen (TheaterID, screenNumber,Capacity,isIMAX, is3D)
@@ -56,51 +50,19 @@ VALUES (3, 4, 20, 0,1);
 
 /*Add Movies*/
 INSERT INTO Movie (Title, Description,MinutesDuration , Rating)
-VALUES ('Title1', 'Description 1', 120,'PG-13');
+VALUES ('Movie 1', 'Movie 1 Description', 120,'PG-13');
 
 INSERT INTO Movie (Title, Description,MinutesDuration , Rating)
-VALUES ('Title2', 'Description 2', 115,'PG');
+VALUES ('Movie 2', 'Movie 2 Description', 115,'PG');
 
 INSERT INTO Movie (Title, Description,MinutesDuration , Rating)
-VALUES ('Title3', 'Description 3', 110,'R');
+VALUES ('Movie 3', 'Movie 3 Description', 110,'R');
 
 INSERT INTO Movie (Title, Description,MinutesDuration , Rating)
-VALUES ('Title4', 'Description 4', 119,'G');
+VALUES ('Movie 4', 'Movie 4 Description', 119,'G');
 
 /*add schedule*/
--- Theater1 up to 24th: 
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (1, '2017-04-21 4:00:00', 1, 1, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (1, '2017-04-21 6:15:00', 1, 2, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (1, '2017-04-21 9:00:00', 1, 3, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (1, '2017-04-21 11:15:00', 1, 4, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (2, '2017-04-21 4:00:00', 1, 4, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (2, '2017-04-21 6:15:00', 1, 3, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (2, '2017-04-21 9:00:00', 1, 2, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (2, '2017-04-21 11:15:00', 1, 1, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (3, '2017-04-21 4:00:00', 1, 3, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (3, '2017-04-21 6:15:00', 1, 4, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (3, '2017-04-21 9:00:00', 1, 1, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (3, '2017-04-21 11:15:00', 1, 2, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (4, '2017-04-21 4:00:00', 1, 2, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (4, '2017-04-21 6:15:00', 1, 1, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (4, '2017-04-21 9:00:00', 1, 4, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (4, '2017-04-21 11:15:00', 1, 3, 0);
+-- Theater1 up to 26: 
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
 VALUES (1, '2017-04-22 4:00:00', 1, 1, 0);
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
@@ -170,7 +132,7 @@ VALUES (1, '2017-04-24 4:00:00', 1, 1, 0);
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
 VALUES (1, '2017-04-24 6:15:00', 1, 2, 0);
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (1, '2017-04-24 9:00:00', 1, 3, 0);
+VALUES (1, '2017-04-20 9:00:00', 1, 3, 0);
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
 VALUES (1, '2017-04-24 11:15:00', 1, 4, 0);
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
@@ -197,40 +159,73 @@ INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchase
 VALUES (4, '2017-04-24 9:00:00', 1, 4, 0);
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
 VALUES (4, '2017-04-24 11:15:00', 1, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-25 4:00:00', 1, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-25 6:15:00', 1, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-25 9:00:00', 1, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-25 11:15:00', 1, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-25 4:00:00', 1, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-25 6:15:00', 1, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-25 9:00:00', 1, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-25 11:15:00', 1, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-25 4:00:00', 1, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-25 6:15:00', 1, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-25 9:00:00', 1, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-25 11:15:00', 1, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-25 4:00:00', 1, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-25 6:15:00', 1, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-25 9:00:00', 1, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-25 11:15:00', 1, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-26 4:00:00', 1, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-26 6:15:00', 1, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-26 9:00:00', 1, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-26 11:15:00', 1, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-26 4:00:00', 1, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-26 6:15:00', 1, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-26 9:00:00', 1, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-26 11:15:00', 1, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-26 4:00:00', 1, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-26 6:15:00', 1, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-26 9:00:00', 1, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-26 11:15:00', 1, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-26 4:00:00', 1, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-26 6:15:00', 1, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-26 9:00:00', 1, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-26 11:15:00', 1, 3, 0);
 
--- Theater 2 up to the 24th:
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (1, '2017-04-21 4:00:00', 2, 1, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (1, '2017-04-21 6:15:00', 2, 2, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (1, '2017-04-21 9:00:00', 2, 3, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (1, '2017-04-21 11:15:00', 2, 4, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (2, '2017-04-21 4:00:00', 2, 4, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (2, '2017-04-21 6:15:00', 2, 3, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (2, '2017-04-21 9:00:00', 2, 2, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (2, '2017-04-21 11:15:00', 2, 1, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (3, '2017-04-21 4:00:00', 2, 3, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (3, '2017-04-21 6:15:00', 2, 4, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (3, '2017-04-21 9:00:00', 2, 1, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (3, '2017-04-21 11:15:00', 2, 2, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (4, '2017-04-21 4:00:00', 2, 2, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (4, '2017-04-21 6:15:00', 2, 1, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (4, '2017-04-21 9:00:00', 2, 4, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (4, '2017-04-21 11:15:00', 2, 3, 0);
+
+-- Theater 2 up to the 26:
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
 VALUES (1, '2017-04-22 4:00:00', 2, 1, 0);
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
@@ -327,40 +322,72 @@ INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchase
 VALUES (4, '2017-04-24 9:00:00', 2, 4, 0);
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
 VALUES (4, '2017-04-24 11:15:00', 2, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-25 4:00:00', 2, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-25 6:15:00', 2, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-25 9:00:00', 2, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-25 11:15:00', 2, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-25 4:00:00', 2, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-25 6:15:00', 2, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-25 9:00:00', 2, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-25 11:15:00', 2, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-25 4:00:00', 2, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-25 6:15:00', 2, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-25 9:00:00', 2, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-25 11:15:00', 2, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-25 4:00:00', 2, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-25 6:15:00', 2, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-25 9:00:00', 2, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-25 11:15:00', 2, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-26 4:00:00', 2, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-26 6:15:00', 2, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-26 9:00:00', 2, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-26 11:15:00', 2, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-26 4:00:00', 2, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-26 6:15:00', 2, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-26 9:00:00', 2, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-26 11:15:00', 2, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-26 4:00:00', 2, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-26 6:15:00', 2, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-26 9:00:00', 2, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-26 11:15:00', 2, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-26 4:00:00', 2, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-26 6:15:00', 2, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-26 9:00:00', 2, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-26 11:15:00', 2, 3, 0);
 
--- Theater 3 up to 21th:
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (1, '2017-04-21 4:00:00', 3, 1, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (1, '2017-04-21 6:15:00', 3, 2, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (1, '2017-04-21 9:00:00', 3, 3, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (1, '2017-04-21 11:15:00', 3, 4, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (2, '2017-04-21 4:00:00', 3, 4, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (2, '2017-04-21 6:15:00', 3, 3, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (2, '2017-04-21 9:00:00', 3, 2, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (2, '2017-04-21 11:15:00', 3, 1, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (3, '2017-04-21 4:00:00', 3, 3, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (3, '2017-04-21 6:15:00', 3, 4, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (3, '2017-04-21 9:00:00', 3, 1, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (3, '2017-04-21 11:15:00', 3, 2, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (4, '2017-04-21 4:00:00', 3, 2, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (4, '2017-04-21 6:15:00', 3, 1, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (4, '2017-04-21 9:00:00', 3, 4, 0);
-INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
-VALUES (4, '2017-04-21 11:15:00', 3, 3, 0);
+-- Theater 3 up to 26:
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
 VALUES (1, '2017-04-22 4:00:00', 3, 1, 0);
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
@@ -457,3 +484,76 @@ INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchase
 VALUES (4, '2017-04-24 9:00:00', 3, 4, 0);
 INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
 VALUES (4, '2017-04-24 11:15:00', 3, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-25 4:00:00', 3, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-25 6:15:00', 3, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-25 9:00:00', 3, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-25 11:15:00', 3, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-25 4:00:00', 3, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-25 6:15:00', 3, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-25 9:00:00', 3, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-25 11:15:00', 3, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-25 4:00:00', 3, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-25 6:15:00', 3, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-25 9:00:00', 3, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-25 11:15:00', 3, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-25 4:00:00', 3, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-25 6:15:00', 3, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-25 9:00:00', 3, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-25 11:15:00', 3, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-26 3:00:00', 3, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-26 5:15:00', 3, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-26 8:00:00', 3, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (1, '2017-04-26 10:15:00', 3, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-26 4:00:00', 3, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-26 6:15:00', 3, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-26 9:00:00', 3, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (2, '2017-04-26 11:15:00', 3, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-26 5:00:00', 3, 3, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-26 7:15:00', 3, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-26 10:00:00', 3, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (3, '2017-04-26 12:15:00', 3, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-26 2:00:00', 3, 2, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-26 4:15:00', 3, 1, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-26 7:00:00', 3, 4, 0);
+INSERT INTO scheduledmovie (ScreenID, StartTime, TheaterID, MovieID, NumPurchased)
+VALUES (4, '2017-04-26 9:15:00', 3, 3, 0);
+
+
+/*ticket price data */
+INSERT INTO ticketprice (name, PriceCents)
+VALUES ('Adult', 7.25);
+INSERT INTO ticketprice (name, PriceCents)
+VALUES ('Child', 5.25);
+INSERT INTO ticketprice (name, PriceCents)
+VALUES ('Senior', 4.25);
